@@ -1,11 +1,12 @@
-// project.js - purpose and description here
-// Author: Tommy Nguyen
-// Date: 4/3/25
+/* experiment1/js/project.js - purpose and description here
+   Author: Tommy Nguyen
+   Date: 4/3/25
 
-// NOTE: This is how we might start a basic JavaaScript OOP project
+   NOTE: This is how we might start a basic JavaaScript OOP project
 
-// Constants - User-servicable parts
-// In a longer project I like to put these in a separate file
+   Constants - User-servicable parts
+   In a longer project I like to put these in a separate file
+*/
 
 // define a class
 class MyProjectClass {
