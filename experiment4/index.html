@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Experiment 3 – Grid World & Dungeon</title>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    /* side-by-side layout */
+    #generators {
+      display: flex;
+      gap: 1rem;
+    }
+    #generators > section {
+      flex: 1;
+    }
+    textarea {
+      font-family: monospace;
+      white-space: pre;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #description {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Experiment 3 – Grid World & Dungeon</h1>
+
+  <div id="generators">
+    <!-- Overworld -->
+    <section id="overworld">
+      <h2>Overworld Generator</h2>
+      <button id="reseedWorld">Reseed</button>
+      <span id="seedReportWorld">seed 0</span>
+      <textarea id="asciiBoxWorld" rows="20" cols="30"></textarea>
+      <div id="canvasContainerWorld"></div>
+    </section>
+
+    <!-- Dungeon -->
+    <section id="dungeon">
+      <h2>Dungeon Generator</h2>
+      <button id="reseedDungeon">Reseed</button>
+      <span id="seedReportDungeon">seed 0</span>
+      <textarea id="asciiBoxDungeon" rows="20" cols="30"></textarea>
+      <div id="canvasContainerDungeon"></div>
+    </section>
+  </div>
+
+  <div id="description">
+    <main id="content">
+      <section>  
+        <!-- generator card -->
+        <div class="minor-section">
+          <div id="box" class="quote-box"></div>
+        </div>
+      <section id="project-info">
+        <div class="minor-section">
+          <h2>Description</h2>
+          <p>Built two procedural generators, one overworld and a dungeon generator, each driven by its own seed.</p>
+          <p>The overworld uses Perlin noise to paint grass and water tiles, then applies a bitmask to wrap cliffs smoothly around water bodies.</p>
+          <p>The dungeon generator carves out a central chamber, hallways in four directions, and small end rooms, then places up to two chests per seed.</p>
+        </div>
+
+        <div class="minor-section">
+          <h2>Technical</h2>
+          <p>Built both generators in a single <code>project.js</code> using p5.js instance mode so each canvas has its own scoped state but shares one tileset image. The overworld uses Perlin noise to assign “w” (water) or “g” (grass) per cell, animates water frames via a time-based noise third dimension, and applies a 4-bit neighbor bitmask to auto-tile cliff edges.</p>
+          <p>The dungeon generator maintains a 2D grid of “_” (wall) and “.” (floor), carves a central chamber, four directional corridors, and small end rooms, then runs a 16-entry lookup table to choose wall tile variants. After carving it randomly picks one north-facing wall as a door and up to two floor cells as chests, overlaying their sprites on top.</p>
+          <p>Both generators synchronize an ASCII <code>&lt;textarea&gt;</code> (rows x cols) with the canvas drawing</p>
+        </div>
+
+        <div class="minor-section">
+          <h2>Reflection</h2>
+          <p>Juggling two p5 instances in one file was a great lesson in encapsulating state</p>
+          <p>Implementing the dungeon’s autotile bitmask and lookup table proved the trickies and ensuring doors and chests didn’t overlap required careful conditional ordering.</p>
+          <p>Overall this project deepened my understanding of procedural map design and seed-based world generation</p>
+        </div>
+
+      </section>
+
+      </section>
+  
+      <nav id="links" class="minor-section">
+        <ul><li><a href="../index.html">Home</a></li></ul>
+      </nav>
+    </main>    
+    <p>
+      This experiment shows two procedural generators side-by-side. On the left is the overworld noise-based world; on the right is a hub-and-corridor dungeon with random rooms, and chests.
+    </p>
+  </div>
+
+  <script src="js/project.js" defer></script>
+  <script src="js/dungeon.js" defer></script>
+</body>
+</html>
