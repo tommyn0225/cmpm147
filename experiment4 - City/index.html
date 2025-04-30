@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Experiment 4 – Neon City</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <!-- xxhash for deterministic hashes -->
+  <script src="https://cdn.jsdelivr.net/npm/xxhash-wasm@1.0.2/dist/xxhash.min.js"></script>
+</head>
+<body>
+  <!-- engine.js will inject this seed <input> and instructions here -->
+  <div id="controls">
+    <h1>Neon Metropolis Infinite Strip</h1>
+  </div>
+
+  <!-- engine.js will parent the p5 canvas into this -->
+  <div id="container"></div>
+
+  <!-- Core engine (unchanged) -->
+  <script src="js/engine.js"></script>
+  <!-- Your ported city logic -->
+  <script defer src="js/project.js"></script>
+</body>
+</html>
