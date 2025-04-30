@@ -1,4 +1,5 @@
-// File: js/project.js
+// Author: Tommy Nguyen
+// Date: 4/28/2025
 "use strict";
 
 /* Neon Metropolis Infinite Strip Generator

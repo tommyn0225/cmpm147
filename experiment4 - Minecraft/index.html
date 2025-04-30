@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Experiment 4: Procedural Generators</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Experiment 4 – Minecraft</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- p5.js -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xxhash-wasm@1.0.2/dist/xxhash.min.js"></script>
-  <script src="/experiment4/js/engine.js"></script>
-  <script defer src="/experiment4/js/project.js"></script>
+  <!-- xxhash (plain-JS) -->
+  <script src="js/xxhash.min.js"></script>
 </head>
 <body>
-  <div id="container">
-    <h1>Experiment 4: Procedural Generators</h1>
-    <div id="canvasContainer"></div>
-  </div>
+  <div id="controls"><h1>Minecraft Infinite Generation</h1></div>
+  <div id="container"></div>
+
+  <!-- your code needs XXH ready -->
+  <script defer src="js/project.js"></script>
+  <script defer src="js/engine.js"></script>
 </body>
 </html>

@@ -1,9 +1,5 @@
-// sketch.js - purpose and description here
-// Author: Your Name
-// Date:
-
-// Here is how you might set up an OOP p5.js project
-// Note that p5.js looks for a file called sketch.js
+// Author: Tommy Nguyen
+// Date: 4/28/2025
 
 // Constants - User-servicable parts
 // In a longer project I like to put these in a separate file
