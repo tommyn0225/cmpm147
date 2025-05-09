@@ -6,7 +6,7 @@ let currentInspirationPixels, currentCanvas;
 let mutationCount = 0;
 
 // DOM elements
-let dropper, restartBtn, slider, rateDisplay, activeScore, bestScore, fpsDisplay, memoryContainer;
+let dropper, restartBtn, slider, rateDisplay, activeScore, bestScore, fpsDisplay, memoryContainer, referencePic, referenceCredit; // added reference UI elements
 
 function preload() {
   // grab DOM references
@@ -18,6 +18,9 @@ function preload() {
   bestScore       = document.getElementById('bestScore');
   fpsDisplay      = document.getElementById('fpsCounter');
   memoryContainer = document.getElementById('memory');
+  // reference picture elements
+  referencePic     = document.getElementById('referencePic');
+  referenceCredit  = document.getElementById('referenceCredit');
 
   // load inspirations
   allInspirations = getInspirations();
@@ -45,6 +48,18 @@ function changeInspiration() {
 }
 
 function setup() {
+  // grab reference elements (ensure DOM ready)
+  referencePic = document.getElementById('referencePic');
+  referenceCredit = document.getElementById('referenceCredit');
+  // update reference image & caption
+  referencePic.src = currentInspiration.assetUrl;
+  referenceCredit.textContent = currentInspiration.credit;
+
+  // update reference image & caption
+  referencePic.src = currentInspiration.assetUrl;
+  referenceCredit.textContent = currentInspiration.credit;
+
+  // create and resize canvas via initDesign
   // create and resize canvas via initDesign
   currentDesign = initDesign(currentInspiration);
   currentCanvas = createCanvas(width, height);

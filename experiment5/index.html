@@ -16,29 +16,28 @@
   <main id="content">
     <h1>Experiment 5 – Evolutionary Impressions</h1>
 
-    <!-- reference image & title -->
-    <div class="minor-section">
-      <img id="referencePic" src="" alt="Reference image" />
-      <p id="referenceCredit"></p>
-    </div>
-
-    <!-- generator controls and display -->
-    <div class="minor-section">
-      <select id="dropper"></select>
-      <button id="restart">Restart</button>
-
-      <p>
-        Mutation rate: <span id="rate"></span>%<br />
-        <input id="slider" type="range" min="1" max="100" value="100" />
-      </p>
-
-      <div id="active"></div>
-      <p>Active score: <span id="activeScore"></span></p>
-      <p>Best score: <span id="bestScore"></span></p>
-      <p>Exploration rate: <span id="fpsCounter"></span> fps</p>
-
-      <div id="best"></div>
-      <div id="memory" data-max-items="16"></div>
+    <!-- combined reference + controls -->
+    <div class="minor-section" style="overflow: auto;">
+      <!-- reference panel -->
+      <div style="display: inline-block; vertical-align: top;">
+        <img id="referencePic" src="" alt="Reference image" />
+        <p id="referenceCredit"></p>
+      </div>
+      <!-- controls panel -->
+      <div style="display: inline-block; vertical-align: top; margin-left: 20px;">
+        <select id="dropper"></select>
+        <button id="restart">Restart</button>
+        <p>
+          Mutation rate: <span id="rate"></span>%<br />
+          <input id="slider" type="range" min="1" max="100" value="100" />
+        </p>
+        <div id="active"></div>
+        <p>Active score: <span id="activeScore"></span></p>
+        <p>Best score: <span id="bestScore"></span></p>
+        <p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+        <div id="best"></div>
+        <div id="memory" data-max-items="16"></div>
+      </div>
     </div>
 
     <!-- project description -->

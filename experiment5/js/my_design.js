@@ -11,9 +11,9 @@
 
 function getInspirations() {
   return [
-    { name: "Pikachu", assetUrl: "../experiment5/img/pikachu.png", credit: "Pikachu, The Pokémon Company" },
-    { name: "Google Chrome", assetUrl: "../experiment5/img/chrome.png", credit: "Google Chrome Logo, Google, 2008" },
-    { name: "Raising the Flag on Iwo Jima", assetUrl: "../experiment5/img/flag.jpg", credit: "Raising the Flag on Iwo Jima, Joe Rosenthal, 1945" }
+    { name: "Pikachu", assetUrl: "img/pikachu.png", credit: "Pikachu, The Pokémon Company" },
+    { name: "Google Chrome", assetUrl: "img/chrome.png", credit: "Google Chrome Logo, Google, 2008" },
+    { name: "Raising the Flag on Iwo Jima", assetUrl: "img/flag.jpg", credit: "Raising the Flag on Iwo Jima, Joe Rosenthal, 1945" }
   ];
 }
 
